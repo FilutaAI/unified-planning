@@ -72,7 +72,7 @@ class Effect:
         self._condition = condition
         self._kind = kind
         fvo = fluent.environment.free_vars_oracle
-        free_vars: Set["up.model.variable.Variable"] = fvo.get_free_variables(fluent)
+        free_vars: Set["up.model.variable.Variable"] = fvo.get_free_variables(fluent).copy()
         free_vars.update(fvo.get_free_variables(value))
         free_vars.update(fvo.get_free_variables(condition))
 
