@@ -563,7 +563,7 @@ def get_example_problems():
     increase_both.add_increase_effect(value(o2), 1)
     problem.add_action(increase_both)
 
-    problem.add_goal(Equals(value(o1), 1))
+    problem.add_goal(Equals(value(o1), 2))
     problems["basic_undef_numeric"] = TestCase(
         problem=problem,
         solvable=True,
